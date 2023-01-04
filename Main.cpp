@@ -13,7 +13,7 @@ struct Library
 
 int main()
 {
-	int N, * I;
+	int N, * I1, * I2;
 	Library Book[10];
 	Book[0] = { "The House in the Pines", "Ana Reyes", "New York Times", "Novel" };
 	Book[1] = { "A World of Curiosities", "Louise Penny", "New York Times","Novel" };
@@ -42,6 +42,14 @@ int main()
 		cout << " 8 for " << Book[8].Name << endl;
 		cout << " 9 for " << Book[9].Name << endl;
 		cout << "End for Type: 1 - for Name, 2 - for Autor, 3 - for Publish, 4 - for Genre" << endl;
+		cin >> *I1 >> *I2;
+		cout << "Insert new Information: " << endl;
+		if (*I2 == 1) cin >> Book[*I1].Name;
+		else if (*I2 == 2) cin >> Book[*I1].Autor;
+		else if (*I2 == 3) cin >> Book[*I1].Publish;
+		else if (*I2 == 3) cin >> Book[*I1].Genre;
+
+
 	}
 	cout << endl;
 	return 0;
