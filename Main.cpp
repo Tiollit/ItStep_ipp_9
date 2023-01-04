@@ -48,7 +48,7 @@ int main()
 		else if (*I2 == 2) cin >> Book[*I1].Autor;
 		else if (*I2 == 3) cin >> Book[*I1].Publish;
 		else if (*I2 == 3) cin >> Book[*I1].Genre;
-
+		cout << ""
 
 	}
 	cout << endl;
