@@ -11,9 +11,41 @@ struct Library
 	char Genre[20];
 };
 
+Library Inf(Library Book[10],int M)
+{
+	int I1, I2, k;
+	cout << "To change Information inside of book - choose Book and type: " << endl;
+	cout << " 0 for " << Book[0].Name << endl;
+	cout << " 1 for " << Book[1].Name << endl;
+	cout << " 2 for " << Book[2].Name << endl;
+	cout << " 3 for " << Book[3].Name << endl;
+	cout << " 4 for " << Book[4].Name << endl;
+	cout << " 5 for " << Book[5].Name << endl;
+	cout << " 6 for " << Book[6].Name << endl;
+	cout << " 7 for " << Book[7].Name << endl;
+	cout << " 8 for " << Book[8].Name << endl;
+	cout << " 9 for " << Book[9].Name << endl;
+	cout << "end for Type: 1 - for Name, 2 - for Autor, 3 - for Publish, 4 - for Genre" << endl;
+	cin >> I1 >> I2;
+	cout << "Insert new Information: " << endl;
+	if (I2 == 1) cin >> Book[I1].Name;
+	else if (I2 == 2) cin >> Book[I1].Autor;
+	else if (I2 == 3) cin >> Book[I1].Publish;
+	else if (I2 == 3) cin >> Book[I1].Genre;
+	cout << "If you want to put aditional information tap 1, if you to return in main menu tap 0" << endl;
+	cin >> k;
+	if (k == 1) return Inf(Book, M + 1);
+	else if (k == 0) return Book[10];
+}
+
+Library Print(Library Book[10])
+{
+	cout << 
+}
+
 int main()
 {
-	int N, * I1, * I2;
+	int N, M = 0;
 	Library Book[10];
 	Book[0] = { "The House in the Pines", "Ana Reyes", "New York Times", "Novel" };
 	Book[1] = { "A World of Curiosities", "Louise Penny", "New York Times","Novel" };
@@ -27,28 +59,14 @@ int main()
 	Book[9] = { "Bloodmarked", "Tracy Deonn", "New York Times", "Fantasy"};
 	cout << "To move thought Library use numbers: " << endl;
 	cout << "If You want to change information inside of book put 1" << endl;
+	cout << "If You want to print all library put 2" << endl;
 	cin >> N;
 	if (N == 1)
 	{
-		cout << "To change Information inside of book - choose Book and type: " << endl;
-		cout << " 0 for " << Book[0].Name << endl;
-		cout << " 1 for " << Book[1].Name << endl;
-		cout << " 2 for " << Book[2].Name << endl;
-		cout << " 3 for " << Book[3].Name << endl;
-		cout << " 4 for " << Book[4].Name << endl;
-		cout << " 5 for " << Book[5].Name << endl;
-		cout << " 6 for " << Book[6].Name << endl;
-		cout << " 7 for " << Book[7].Name << endl;
-		cout << " 8 for " << Book[8].Name << endl;
-		cout << " 9 for " << Book[9].Name << endl;
-		cout << "End for Type: 1 - for Name, 2 - for Autor, 3 - for Publish, 4 - for Genre" << endl;
-		cin >> *I1 >> *I2;
-		cout << "Insert new Information: " << endl;
-		if (*I2 == 1) cin >> Book[*I1].Name;
-		else if (*I2 == 2) cin >> Book[*I1].Autor;
-		else if (*I2 == 3) cin >> Book[*I1].Publish;
-		else if (*I2 == 3) cin >> Book[*I1].Genre;
-		cout << ""
+		Inf(Book, M);
+	}
+	else if (N == 2)
+	{
 
 	}
 	cout << endl;
