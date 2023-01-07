@@ -50,7 +50,7 @@ void SAutor(Library Book[10])
 {
 	char Au[30];
 	cout << "Incert the Autor: " << endl;
-	cin >> Au;
+	gets_s(Au);
 	for (int i = 0; i < 10; i++)
 	{
 		if (Book[i].Autor == Au)
