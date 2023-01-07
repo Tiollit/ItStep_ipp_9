@@ -38,9 +38,26 @@ Library Inf(Library Book[10],int M)
 	else if (k == 0) return Book[10];
 }
 
-Library Print(Library Book[10])
+void Print(Library Book[10])
 {
-	cout << 
+	for (int i = 0; i < 10; i++)
+	{
+		cout << Book[i].Name << ", " << Book[i].Autor << ", " << Book[i].Publish << ", " << Book[i].Genre << endl;
+	}
+}
+
+void SAutor(Library Book[10])
+{
+	char Au[30];
+	cout << "Incert the Autor: " << endl;
+	cin >> Au;
+	for (int i = 0; i < 10; i++)
+	{
+		if (Book[i].Autor == Au)
+		{
+			cout << i << ": " << Book[i].Name << ", " << Book[i].Autor << ", " << Book[i].Publish << ", " << Book[i].Genre << endl;
+		}		
+	}
 }
 
 int main()
@@ -60,6 +77,7 @@ int main()
 	cout << "To move thought Library use numbers: " << endl;
 	cout << "If You want to change information inside of book put 1" << endl;
 	cout << "If You want to print all library put 2" << endl;
+	cout << "if you want to find a book based on Autor tape 3" << endl;
 	cin >> N;
 	if (N == 1)
 	{
@@ -67,8 +85,11 @@ int main()
 	}
 	else if (N == 2)
 	{
-
+		Print(Book);
+	}	
+	else if (N == 3)
+	{
+		SAutor(Book);
 	}
-	cout << endl;
 	return 0;
 }
