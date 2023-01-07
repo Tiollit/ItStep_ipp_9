@@ -46,7 +46,7 @@ void Print(Library Book[10])
 	}
 }
 
-void SAutor(Library Book[10])
+Library SAutor(Library Book[10])
 {
 	char Au[30];
 	cout << "Incert the Autor: " << endl;
@@ -58,6 +58,7 @@ void SAutor(Library Book[10])
 			cout << i << ": " << Book[i].Name << ", " << Book[i].Autor << ", " << Book[i].Publish << ", " << Book[i].Genre << endl;
 		}		
 	}
+	return Book[10];
 }
 
 int main()
@@ -69,15 +70,15 @@ int main()
 	Book[2] = { "Queen of Myth and Monsters","Scarlett St. Clair","Indigo","Novel" };
 	Book[3] = { "What's for Dessert","Claire Saffitz","New York Times","Cookbook" };
 	Book[4] = { "Pageboy","Elliot Page","Self-published","Memoir" };
-	Book[5] = { "Our Book of Awesome","Neil Pasricha","New York Times","Self-Help"};
-	Book[6] = { "Elizabeth Taylor: The Grit & Glamour Of An Icon","Kate Andersen Brower","New York Times","Biography"};
-	Book[7] = { "The Choice: The Dragon Heart Legacy","Nora Roberts","New York Times","Fantasy"};
+	Book[5] = { "Our Book of Awesome","Neil Pasricha","New York Times","Self-Help" };
+	Book[6] = { "Elizabeth Taylor: The Grit & Glamour Of An Icon","Kate Andersen Brower","New York Times","Biography" };
+	Book[7] = { "The Choice: The Dragon Heart Legacy","Nora Roberts","New York Times","Fantasy" };
 	Book[8] = { "The Lost Metal","Brandon Sanderson","New York Times","Novel" };
-	Book[9] = { "Bloodmarked","Tracy Deonn","New York Times","Fantasy"};
+	Book[9] = { "Bloodmarked","Tracy Deonn","New York Times","Fantasy" };
 	cout << "To move thought Library use numbers: " << endl;
 	cout << "If You want to change information inside of book put 1" << endl;
 	cout << "If You want to print all library put 2" << endl;
-	cout << "if you want to find a book based on Autor tape 3" << endl;
+	cout << "if you want to find a book based on Autor put 3" << endl;
 	cin >> N;
 	if (N == 1)
 	{
