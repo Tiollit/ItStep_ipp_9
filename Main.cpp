@@ -64,16 +64,16 @@ int main()
 {
 	int N, M = 0;
 	Library Book[10];
-	Book[0] = { "The House in the Pines", "Ana Reyes", "New York Times", "Novel" };
-	Book[1] = { "A World of Curiosities", "Louise Penny", "New York Times","Novel" };
-	Book[2] = { "Queen of Myth and Monsters", "Scarlett St. Clair", "Indigo","Novel" };
-	Book[3] = { "What's for Dessert", "Claire Saffitz", "New York Times", "Cookbook" };
-	Book[4] = { "Pageboy", "Elliot Page", "Self-published", "Memoir" };
-	Book[5] = { "Our Book of Awesome", "Neil Pasricha", "New York Times", "Self-Help"};
-	Book[6] = { "Elizabeth Taylor: The Grit & Glamour Of An Icon", "Kate Andersen Brower", "New York Times", "Biography"};
-	Book[7] = { "The Choice: The Dragon Heart Legacy", "Nora Roberts", "New York Times", "Fantasy"};
-	Book[8] = { "The Lost Metal", "Brandon Sanderson", "New York Times", "Novel" };
-	Book[9] = { "Bloodmarked", "Tracy Deonn", "New York Times", "Fantasy"};
+	Book[0] = { "The House in the Pines","Ana Reyes","New York Times","Novel" };
+	Book[1] = { "A World of Curiosities","Louise Penny","New York Times","Novel" };
+	Book[2] = { "Queen of Myth and Monsters","Scarlett St. Clair","Indigo","Novel" };
+	Book[3] = { "What's for Dessert","Claire Saffitz","New York Times","Cookbook" };
+	Book[4] = { "Pageboy","Elliot Page","Self-published","Memoir" };
+	Book[5] = { "Our Book of Awesome","Neil Pasricha","New York Times","Self-Help"};
+	Book[6] = { "Elizabeth Taylor: The Grit & Glamour Of An Icon","Kate Andersen Brower","New York Times","Biography"};
+	Book[7] = { "The Choice: The Dragon Heart Legacy","Nora Roberts","New York Times","Fantasy"};
+	Book[8] = { "The Lost Metal","Brandon Sanderson","New York Times","Novel" };
+	Book[9] = { "Bloodmarked","Tracy Deonn","New York Times","Fantasy"};
 	cout << "To move thought Library use numbers: " << endl;
 	cout << "If You want to change information inside of book put 1" << endl;
 	cout << "If You want to print all library put 2" << endl;
