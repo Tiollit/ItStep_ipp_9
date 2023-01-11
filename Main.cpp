@@ -63,7 +63,8 @@ Library SAutor(Library Book[10])
 
 int main()
 {
-	int N, M = 0;
+	int N,L, M = 0;
+	bool trig = true;
 	Library Book[10];
 	Book[0] = { "The House in the Pines","Ana Reyes","New York Times","Novel" };
 	Book[1] = { "A World of Curiosities","Louise Penny","New York Times","Novel" };
@@ -75,22 +76,27 @@ int main()
 	Book[7] = { "The Choice: The Dragon Heart Legacy","Nora Roberts","New York Times","Fantasy" };
 	Book[8] = { "The Lost Metal","Brandon Sanderson","New York Times","Novel" };
 	Book[9] = { "Bloodmarked","Tracy Deonn","New York Times","Fantasy" };
-	cout << "To move thought Library use numbers: " << endl;
-	cout << "If You want to change information inside of book put 1" << endl;
-	cout << "If You want to print all library put 2" << endl;
-	cout << "if you want to find a book based on Autor put 3" << endl;
-	cin >> N;
-	if (N == 1)
-	{
-		Inf(Book, M);
-	}
-	else if (N == 2)
-	{
-		Print(Book);
-	}	
-	else if (N == 3)
-	{
-		SAutor(Book);
-	}
+	do	{
+		cout << "To move thought Library use numbers: " << endl;
+		cout << "If You want to change information inside of book put 1" << endl;
+		cout << "If You want to print all library put 2" << endl;
+		cout << "if you want to find a book based on Autor put 3" << endl;
+		cin >> N;
+		if (N == 1)
+		{
+			Inf(Book, M);
+		}
+		else if (N == 2)
+		{
+			Print(Book);
+		}
+		else if (N == 3)
+		{
+			SAutor(Book);
+		}
+		cout << "If you want to continue working with Library tap 1, if want to end tap 0: " << endl;
+		cin >> L;
+		if (L == 0) trig = false;		
+	} while (trig = true);
 	return 0;
 }
