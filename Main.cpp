@@ -28,7 +28,7 @@ Library Inf(Library Book[10],int M)
 	cout << "end for Type: 1 - for Name, 2 - for Autor, 3 - for Publish, 4 - for Genre" << endl;
 	cin >> I1 >> I2;
 	cout << "Insert new Information: " << endl;
-	if (I2 == 1) cin >> Book[I1].Name;
+	if (I2 == 1) gets_s(Book[I1].Name);
 	else if (I2 == 2) gets_s(Book[I1].Autor);
 	else if (I2 == 3) gets_s(Book[I1].Publish);
 	else if (I2 == 3) gets_s(Book[I1].Genre);
