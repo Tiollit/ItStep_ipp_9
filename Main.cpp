@@ -29,9 +29,9 @@ Library Inf(Library Book[10],int M)
 	cin >> I1 >> I2;
 	cout << "Insert new Information: " << endl;
 	if (I2 == 1) cin >> Book[I1].Name;
-	else if (I2 == 2) cin >> Book[I1].Autor;
-	else if (I2 == 3) cin >> Book[I1].Publish;
-	else if (I2 == 3) cin >> Book[I1].Genre;
+	else if (I2 == 2) gets_s(Book[I1].Autor);
+	else if (I2 == 3) gets_s(Book[I1].Publish);
+	else if (I2 == 3) gets_s(Book[I1].Genre);
 	cout << "If you want to put aditional information tap 1, if you to return in main menu tap 0" << endl;
 	cin >> k;
 	if (k == 1) return Inf(Book, M + 1);
